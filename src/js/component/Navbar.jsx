@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar(props) {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container-fluid">
 				<a className="navbar-brand" href="#">
-					Start Bootstrap
+					{props.brand}
 				</a>
 				<button
 					className="navbar-toggler"
@@ -25,16 +25,16 @@ export default function Navbar() {
 							className="nav-link active"
 							aria-current="page"
 							href="#">
-							Home
+							{props.btn1}
 						</a>
 						<a className="nav-link" href="#">
-							About
+							{props.btn2}
 						</a>
 						<a className="nav-link" href="#">
-							Services
+							{props.btn3}
 						</a>
 						<a className="nav-link " href="#">
-							Contact
+							{props.btn4}
 						</a>
 					</div>
 				</div>

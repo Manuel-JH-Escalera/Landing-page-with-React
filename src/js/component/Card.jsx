@@ -1,24 +1,15 @@
 import React from "react";
 
-export default function Card() {
+export default function Card(props) {
 	return (
 		<div className="col-sm-12 col-md-6 col-lg-3 g-4">
 			<div className="card">
-				<img
-					src="
-	https://picsum.photos/500/325"
-					className="card-img-top"
-					alt="..."
-				/>
+				<img src={props.img} className="card-img-top" alt="..." />
 				<div className="card-body text-center">
-					<h5 className="card-title">Card title</h5>
-					<p className="card-text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna
-					</p>
+					<h5 className="card-title">{props.cardtitle}</h5>
+					<p className="card-text">{props.cardtext}</p>
 					<a href="#" className="btn btn-primary">
-						Find Out More!
+						{props.btntext}
 					</a>
 				</div>
 			</div>
